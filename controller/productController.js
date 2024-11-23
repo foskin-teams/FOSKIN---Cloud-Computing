@@ -1,5 +1,4 @@
 const db = require('../config/firebase')
-const User = require('../model/User')
 
 class UserController{
 
