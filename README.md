@@ -5,7 +5,7 @@
 FOSKIN API Documentation (Bangkit Product Based Capstone Project - C242-PS014)
 
 ```sh
-api.foskin.id/v1
+api.foskin.id/v1/
 ```
 
 ## Cloud Technology
