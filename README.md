@@ -1,4 +1,4 @@
-# Fruitarians - Cloud Computing
+# FOSKIN - Cloud Computing
 
 ## Base URL
 
