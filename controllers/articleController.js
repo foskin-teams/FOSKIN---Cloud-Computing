@@ -1,4 +1,5 @@
 const db = require('../config/firebase')
+const Product = require('../models/Product')
 
 class UserController{
 

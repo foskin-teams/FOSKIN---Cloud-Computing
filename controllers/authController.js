@@ -1,7 +1,7 @@
 const db = require('../config/firebase');
 const UserController = require('./userController');
 
-const loginUser = async(req, res) => {
+const login = async(req, res) => {
     const { phoneNumber } = req.body
 
     phoneNumber == null && res.status(400).send({
@@ -44,4 +44,4 @@ const verifyOTP = async(req,res) =>{
     }
 }
 
-module.exports = {loginUser,  verifyOTP}
+module.exports = {login,  verifyOTP}

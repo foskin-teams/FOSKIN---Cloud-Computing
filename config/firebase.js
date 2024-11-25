@@ -1,9 +1,9 @@
 const admin = require('firebase-admin');
+const FIREBASE_KEY = require('./firestore-key.json')
 
 // Inisialisasi Firebase Admin SDK
 admin.initializeApp({
-  credential: admin.credential.cert(JSON.parse(process.env.FIREBASE_KEY)),
-  databaseURL: process.env.DATABASE_URL,
+  credential: admin.credential.cert(FIREBASE_KEY)
 });
 
 const db = admin.firestore()

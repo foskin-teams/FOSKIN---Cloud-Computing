@@ -1,5 +1,5 @@
 class User {
-    constructor(name, email, confirm_email, phone, confirm_phone, age, gender, skin_type, role, profile_image, settings, hasStore){
+    constructor(name, email, confirm_email, phone, confirm_phone, age, gender, skin_type, role, profile_image, settings, hasStore, token){
         const bucketName = process.env.BUCKET_NAME || 'foskin-storage'
         this.name = name || null
         this.email = email | null
@@ -13,6 +13,7 @@ class User {
         this.profile_image = profile_image || `storage.googleapis.com/${bucketName}/images/default_profile.jpg`
         this.settings = settings
         this.hasStore = hasStore
+        this.token = token
         this.create_at = this.create_at ||new Date()
         this.update_at = new Date()
     }

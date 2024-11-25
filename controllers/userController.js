@@ -1,23 +1,14 @@
 const db = require('../config/firebase')
-const User = require('../model/User')
+const User = require('../models/User')
 
 class UserController{
-
-    async create(phoneNumber){
-        try {
-            await db.collection('users').doc(phoneNumber).set({ phoneNumber });
-            return { status: 201, message: 'User created successfully' };
-        } catch (error) {
-            
-        }
-    }
 
     async index(req, res) {
         try {
             const snapshot = await db.collection('users').get();
             const users = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
-            return res.status(200).send({status:200, message: 'Successfull get all data', data: {users}});
+            return res.status(200).send({status:200, message: 'Success', data: {users}});
         } catch (error) {
             return res.status(500).send({ status: 500, message: `Failed to fetch users: ${error.message}` });
         }
@@ -29,7 +20,7 @@ class UserController{
             const userDoc = await db.collection('users').doc(phoneNumber).get();
             (!userDoc.exists) && res.status(404).send({ status: 404, message: 'User not found' });
 
-            return res.status(200).send({ status: 200, message: 'Successfull', data:{ id: userDoc.id, ...userDoc.data() } });
+            return res.status(200).send({ status: 200, message: 'Success', data:{ id: userDoc.id, ...userDoc.data() } });
         } catch (error) {
             return res.status(500).send({ status: 500, message: `Failed to fetch user: ${error.message}` });
         }
