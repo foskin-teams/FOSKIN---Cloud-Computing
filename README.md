@@ -85,7 +85,7 @@ Docs: [cloud-storage-docs](https://cloud.google.com/storage/docs)
 
 <img src="https://www.vectorlogo.zone/logos/google_cloud_run/google_cloud_run-ar21.svg" width="150" height="150"/>
 
-This cloud run service **`under constroction`**. on development environment.
+This cloud run service **`under construction`**. on development environment.
 
 ```YAML
 Location        : asia-southeast2
